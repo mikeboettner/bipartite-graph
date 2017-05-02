@@ -45,7 +45,7 @@ public class Driver {
         * determine whether the vertex set should be printed in the case
         * of a bipartite graph
         */
-        boolean isBipartite = true;
+        boolean isBipartite;
         
         /**
         * Stores each row of the adjacency matrix as it is entered by the user
@@ -56,13 +56,13 @@ public class Driver {
         * Tracks the number of "red" vertices, used for comma placement in
         * output of the bi-partition
         */
-        int rCount = 0;
+        int rCount;
         
         /**
         * Tracks the number of "blue" vertices, used for comma placement in
         * output of the bi-partition
         */
-        int bCount = 0;
+        int bCount;
         
         /**
         * Controls program loop to allow additional matrices to be entered and
@@ -84,6 +84,10 @@ public class Driver {
         
         while(runAgain)
         {
+            isBipartite = true;
+            bCount = 0;
+            rCount = 0;
+                    
             System.out.print(
                     "\nEnter number of vertices (positive integer): ");
         
